@@ -1,0 +1,17 @@
+<ion-view view-title="Artists">
+    <ion-content>
+        <span ng-if="!artistDetails">
+            Artist Contect Goes Here !
+            <div ng-bind-html="artists.info">html data goes here</div>
+        </span>
+        
+        <ion-list ng-controller="artistsCtrl">
+            <ion-item class="item-icon-right"
+                      ng-click="getReleases(artist)" 
+                      ng-repeat="artist in artistDetails | orderBy:'name'" >
+                {{ artist.name }}
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

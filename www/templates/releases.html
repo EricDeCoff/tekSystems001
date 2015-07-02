@@ -1,0 +1,33 @@
+<ion-view view-title="Releases">
+    <ion-content>
+        <span ng-if="!artistReleases">
+            Release Contect Goes Here !
+            <div ng-bind-html="releases.info">html data goes here</div>
+        </span>
+        <div class="list card">
+            <div class="item item-avatar">
+                <img src="img/ionic.png" />
+                <h2>{{ artistSelected.name }}</h2>
+                <p>{{ artistSelected.area.name  }}</p>
+                <p>
+                    {{ artistSelected.life-span.begin | date:'MM/dd/yyyy' }} - 
+                    <span ng-if="artistSelect.life-span.ended == true">
+                        {{ artistSelected.life-span.end | date:'MM/dd/yyyy' }}
+                    </span>
+                    <span ng-if="artistSelect.life-span.ended == false">Present</span>                    
+                </p>
+            </div>
+            <div class="item  item-divider">
+                Releases
+            </div>
+            <div class="list card">
+                <a href="#" class="item item-icon-left"
+                   ng-repeat="releases in artistReleases.releases | orderBy:'date':true ">
+                    <i class="icon ion-ios-musical-notes"></i>
+                    {{ releases.title }}<br>
+                    {{ releases.date }}
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
