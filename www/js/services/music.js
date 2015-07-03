@@ -26,6 +26,9 @@ angular.module('music.service',[])
                 $http.get(url)
                     .success(function(data, status, header, config){
                     console.log(data);
+                    console.log(data.name);
+                    console.log('life-span.begin:'+data['life-span'].begin);
+                    console.log('life-span.end:'+data['life-span'].end);
                     $rootScope.artistDetails.push(data);
                 });
             });

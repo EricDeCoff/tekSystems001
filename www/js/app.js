@@ -3,7 +3,8 @@ angular.module('eval.001', ['ionic',
                             'music.service',
                             'artists.controller',
                             'artistInfo.controller',
-                            'releases.controller'])
+                            'releases.controller',
+                            'date.directives'])
 
     .run(['$ionicPlatform','musicService', function($ionicPlatform, musicService) {
     $ionicPlatform.ready(function() {

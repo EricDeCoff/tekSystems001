@@ -10,11 +10,7 @@
                 <h2>{{ artistSelected.name }}</h2>
                 <p>{{ artistSelected.area.name  }}</p>
                 <p>
-                    {{ artistSelected.life-span.begin | date:'MM/dd/yyyy' }} - 
-                    <span ng-if="artistSelect.life-span.ended == true">
-                        {{ artistSelected.life-span.end | date:'MM/dd/yyyy' }}
-                    </span>
-                    <span ng-if="artistSelect.life-span.ended == false">Present</span>                    
+                    <artist-datehandler>Data Goes Here</artist-datehandler>
                 </p>
                 <a class="button icon-right ion-chevron-right button-calm"
                    ng-click="artistReleases()" >Releases</a>                

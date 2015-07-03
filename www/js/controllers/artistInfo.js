@@ -4,7 +4,7 @@ angular.module('artistInfo.controller', [])
     console.log('artistInfoCtrl');
      
     $scope.artistReleases= function(){
-        $state.transitionTo('releases')
+        $state.transitionTo('releases');
     };
     
     $scope.artistInfo = {'info':'<p>Wow this is the artist info view HTML data</p>'};
